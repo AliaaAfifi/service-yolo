@@ -50,6 +50,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'product_tag',
+    freezeTableName: true,
+    timestamps: false,
   });
   return ProductTag;
 };

@@ -50,6 +50,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'subcategory',
+    freezeTableName: true,
+    timestamps: false,
   });
   return Subcategory;
 };
