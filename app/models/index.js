@@ -7,6 +7,8 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 // eslint-disable-next-line import/no-dynamic-require
 const config = require(`${__dirname}/../config/config.json`)[env];
+// const { applyExtraSetup } = require('./helpers/extra-setup');
+
 const db = {};
 
 let sequelize;
@@ -32,7 +34,13 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
+// We execute any extra setup after the models are defined, such as adding associations.
+// applyExtraSetup();
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+db.category.hasMany(db.subcategory, { foreignKey: 'category_uuid' });
+db.subcategory.belongsTo(db.category, { foreignKey: 'category_uuid' });
 
 module.exports = db;

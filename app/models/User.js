@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
@@ -38,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     role: {
       type: DataTypes.STRING,
@@ -51,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
     updated_at: {
       type: DataTypes.DATE,
     },
-    upated_by: {
+    updated_by: {
       type: DataTypes.UUID,
     },
     created_at: {

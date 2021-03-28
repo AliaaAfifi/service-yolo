@@ -24,7 +24,7 @@ module.exports = {
       updated_at: {
         type: Sequelize.DATE,
       },
-      upated_by: {
+      updated_by: {
         type: Sequelize.UUID,
       },
       created_at: {

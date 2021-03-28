@@ -18,10 +18,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      description: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       updated_at: {
         type: Sequelize.DATE,
       },
-      upated_by: {
+      updated_by: {
         type: Sequelize.UUID,
       },
       created_at: {

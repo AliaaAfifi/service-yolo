@@ -9,11 +9,16 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
+      },
+      description: {
+        type: Sequelize.STRING,
+        allowNull: true,
       },
       updated_at: {
         type: Sequelize.DATE,
       },
-      upated_by: {
+      updated_by: {
         type: Sequelize.UUID,
       },
       created_at: {

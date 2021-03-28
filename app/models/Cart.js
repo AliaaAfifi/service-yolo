@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     updated_at: {
       type: DataTypes.DATE,
     },
-    upated_by: {
+    updated_by: {
       type: DataTypes.UUID,
     },
     created_at: {
